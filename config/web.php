@@ -13,7 +13,7 @@ $config = [
         '@npm' => '@vendor/npm-asset',
     ],
     'modules' => [
-        'main' => [
+        'admin' => [
             'class' => 'app\modules\admin\Module',
         ],
     ],
