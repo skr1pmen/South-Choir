@@ -112,7 +112,6 @@ main {
     display: block;
     width: 100%;
     padding: 0 2em;
-
     & .infoCards {
         display: flex;
         justify-content: center;
@@ -141,6 +140,84 @@ main {
 
         & .infoCard:hover {
             background: #000;
+            color: #fff;
+        }
+    }
+
+    & .btn {
+        width: max-content;
+        display: flex;
+        padding: .2em .5em;
+        gap: .3em;
+        align-items: center;
+        color: #fff;
+        background: #000;
+        font-size: 1.5em;
+        border-radius: 8px;
+        box-shadow: 0 0 10px gray;
+        transition: .2s linear;
+        float: right;
+    }
+
+    & .btn:hover {
+        background: #fff;
+        color: #000;
+        box-shadow: 0 0 10px rgba(128, 128, 128, 0.1);
+    }
+}
+
+.userCards {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+
+    & .userCard {
+        width: 100%;
+        min-height: 100px;
+        box-shadow: 0 0 5px gray;
+        border-radius: 8px;
+        transition: .3s linear;
+        display: flex;
+        overflow: hidden;
+        padding: .5em;
+        gap: 1em;
+        cursor: pointer;
+
+        & img {
+            aspect-ratio: 1;
+            height: 100px;
+            object-fit: cover;
+            background: linear-gradient(90deg, #0dbaa1, #6fd8ae, #abf6bf);
+            border: none;
+        }
+
+        & div {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: inherit;
+            height: inherit;
+            gap: 2em;
+            position: relative;
+
+            & .userLogin {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                font-size: 2em;
+                color: rgba(128, 128, 128, 0.5);
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    & .userCard:hover {
+        transform: scale(1.01);
+        background: #000;
+        color: #fff;
+
+        & .userLogin {
             color: #fff;
         }
     }

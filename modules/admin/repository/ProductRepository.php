@@ -10,4 +10,9 @@ class ProductRepository
     {
         return Products::find()->count();
     }
+
+    public static function getProducts()
+    {
+        return Products::find()->all();
+    }
 }

@@ -54,7 +54,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     <ul>
                         <li><a href="/admin/panel"><?= FAS::icon('home')->size('2x') ?> Главная</a></li>
                         <li><a href="/admin/panel/users"><?= FAS::icon('users')->size('2x') ?> Пользователи</a></li>
-                        <li><a href=""><?= FAS::icon('paperclip')->size('2x') ?> Товары</a></li>
+                        <li><a href="/admin/panel/products"><?= FAS::icon('paperclip')->size('2x') ?> Товары</a></li>
                         <li><a href="/"><?= FAS::icon('door-open')->size('2x') ?> Вернуться на сайт</a></li>
                     </ul>
                 </nav>

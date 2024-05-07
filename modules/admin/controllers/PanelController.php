@@ -24,4 +24,18 @@ class PanelController extends Controller
         $users = UserRepository::getUsers();
         return $this->render('users', ['users' => $users]);
     }
+
+    public function actionProducts()
+    {
+        $this->view->title = 'Товары';
+        $products = ProductRepository::getProducts();
+        return $this->render('products', ['products' => $products]);
+    }
+
+    public function actionCreateProduct()
+    {
+        $this->view->title = 'Добавление нового продукта';
+        $model = new CreateProductForm();
+        return $this->render('create-product', ['model' => $model]);
+    }
 }

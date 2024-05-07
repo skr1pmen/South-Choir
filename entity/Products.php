@@ -13,6 +13,7 @@ use yii\db\ActiveRecord;
  * @property string form_factor
  * @property integer price
  * @property integer discount
+ * @property string type
  */
 class Products extends ActiveRecord
 {
