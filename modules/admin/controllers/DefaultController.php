@@ -2,6 +2,7 @@
 
 namespace app\modules\admin\controllers;
 
+use Yii;
 use yii\web\Controller;
 
 /**
@@ -15,6 +16,9 @@ class DefaultController extends Controller
      */
     public function actionIndex()
     {
+        if (Yii::$app->user->isGuest) {
+            return $this->redirect('/user/authorization');
+        }
         return $this->redirect('/admin/panel');
     }
 }
