@@ -66,17 +66,9 @@ class m240412_215534_initDB extends Migration
             'price' => $this->integer()->notNull(),
             'discount' => $this->integer()->notNull(),
         ]);
-        $this->createTable('products_sizes', [
-            'id' => $this->primaryKey(),
-            'size_id' => $this->integer()->notNull(),
-        ]);
         $this->createTable('sizes', [
             'id' => $this->primaryKey(),
             'size' => $this->string()->notNull(),
-        ]);
-        $this->createTable('products_colors', [
-            'id' => $this->primaryKey(),
-            'color_id' => $this->integer()->notNull(),
         ]);
         $this->createTable('colors', [
             'id' => $this->primaryKey(),
@@ -84,17 +76,8 @@ class m240412_215534_initDB extends Migration
             'color' => $this->string()->notNull(),
         ]);
         $this->addForeignKey(
-            'products_to_products_sizes_fk',
+            'products_tosizes_fk',
             'products',
-            'size_id',
-            'products_sizes',
-            'id',
-            'CASCADE',
-            'CASCADE'
-        );
-        $this->addForeignKey(
-            'products_sizes_to_sizes_fk',
-            'products_sizes',
             'size_id',
             'sizes',
             'id',
@@ -102,17 +85,8 @@ class m240412_215534_initDB extends Migration
             'CASCADE'
         );
         $this->addForeignKey(
-            'products_to_products_colors_fk',
+            'products_to_colors_fk',
             'products',
-            'color_id',
-            'products_colors',
-            'id',
-            'CASCADE',
-            'CASCADE'
-        );
-        $this->addForeignKey(
-            'products_colors_to_sizes_fk',
-            'products_colors',
             'color_id',
             'colors',
             'id',

@@ -17,5 +17,13 @@ use yii\db\ActiveRecord;
  */
 class Products extends ActiveRecord
 {
+    public function getColor()
+    {
+        return $this->hasOne(Colors::class, ['id' => 'color_id']);
+    }
 
+    public function getSize()
+    {
+        return $this->hasOne(Sizes::class, ['id' => 'size_id']);
+    }
 }

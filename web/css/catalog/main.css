@@ -175,7 +175,35 @@ a {
             & .card {
                 width: 100%;
                 aspect-ratio: 9/13;
-                background: red;
+                /*background: red;*/
+
+                & img {
+                    object-fit: cover;
+                    width: 100%;
+                    aspect-ratio: 1/1.5;
+                }
+
+                & .price {
+                    font-size: 2em;
+                    font-weight: bold;
+                }
+
+                & .priceDiscount {
+                    color: gray;
+                    font-size: 1em;
+                    font-weight: normal;
+                    position: relative;
+                    width: max-content;
+                }
+
+                & .priceDiscount:before {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 50%;
+                    transform: rotate(-12deg);
+                    border-bottom: 2px solid red;
+                }
             }
         }
     }

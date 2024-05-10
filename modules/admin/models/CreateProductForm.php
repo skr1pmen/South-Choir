@@ -23,4 +23,19 @@ class CreateProductForm extends Model
             ['photo', 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg'],
         ];
     }
+
+    public function attributeLabels()
+    {
+        return [
+            'name' => 'Название',
+            'description' => 'Описание',
+            'form_factor' => 'Форм фактор',
+            'price' => 'Цена',
+            'discount' => 'Скидка',
+            'type' => 'Тип',
+            'size_id' => 'Размер',
+            'color_id' => 'Цвет',
+            'photo' => 'Обложка'
+        ];
+    }
 }

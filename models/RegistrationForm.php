@@ -20,6 +20,7 @@ class RegistrationForm extends Model
     {
         return [
             [['login', 'password', 'name', 'surname', 'acceptRules'], 'required'],
+            ['patronymic', 'string'],
             ['photo', 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg'],
             ['login', 'validateLogin'],
             ['password', 'string', 'length' => [8, 24]],

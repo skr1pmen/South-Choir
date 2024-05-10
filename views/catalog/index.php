@@ -1,4 +1,9 @@
 <?php
+/**
+ * @var $men ;
+ * @var $women ;
+ * @var $child ;
+ */
 
 use coderius\swiperslider\SwiperSlider;
 
@@ -34,31 +39,46 @@ SwiperSlider::widget([
 ]);
 ?>
 <div class="page">
+    <div class="manBlock">
+        <div class="titleBlock">#Для мужчин</div>
+        <div class="cards">
+            <?php foreach ($men as $item): ?>
+                <div class="card">
+                    <img src="/images/jeans/<?= $item['id'] ?>.jpg" alt="">
+                    <h3><?= $item->name ?></h3>
+
+                    <span class="price"><?= $item['price'] - ($item['price'] * ($item['discount'] / 100)) ?> ₽</span>
+
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
     <div class="womenBlock">
         <div class="titleBlock">#Для женщин</div>
         <div class="cards">
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
+            <?php foreach ($women as $item): ?>
+                <div class="card">
+                    <img src="/images/jeans/<?= $item['id'] ?>.jpg" alt="">
+                    <h3><?= $item->name ?></h3>
+
+                    <span class="price"><?= $item['price'] - ($item['price'] * ($item['discount'] / 100)) ?> ₽</span>
+
+                </div>
+            <?php endforeach; ?>
         </div>
     </div>
     <div class="childBlock">
         <div class="titleBlock">#Для Детей</div>
         <div class="cards">
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-        </div>
-    </div>
-    <div class="manBlock">
-        <div class="titleBlock">#Для мужчин</div>
-        <div class="cards">
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
+            <?php foreach ($child as $item) : ?>
+                <div class="card">
+                    <img src="/images/jeans/<?= $item['id'] ?>.jpg" alt="">
+                    <h3><?= $item->name ?></h3>
+
+                    <span class="price"><?= $item['price'] - ($item['price'] * ($item['discount'] / 100)) ?> ₽</span>
+
+                </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </div>
