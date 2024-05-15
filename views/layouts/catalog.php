@@ -39,9 +39,9 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     </svg>
                 </a>
                 <nav>
-                    <a href="">Женщины</a>
+                    <a href="/catalog/for-woman">Женщины</a>
                     <a href="/catalog/for-men">Мужчины</a>
-                    <a href="">Дети</a>
+                    <a href="/catalog/for-children">Дети</a>
                 </nav>
                 <a class="user" href="<?php if (Yii::$app->user->isGuest) {
                     echo '/user/authorization';
@@ -67,6 +67,13 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             </div>
         </main>
         <footer class="container">
+            <img src="/images/logo.svg" alt="" class="logo">
+            <span>© 2024 - <?= Date('Y') ?> Интернет магазин South Choir</span>
+            <div class="links">
+                <a href="https://vk.com/skr1pmen" class="vk"></a>
+                <a href="https://youtube.com/skr1pmen" class="youtube"></a>
+                <a href="https://skr1pmen.github.io/ssquadinfo/" class="discord"></a>
+            </div>
         </footer>
         <script>
             window.addEventListener('load', () => {
@@ -76,6 +83,12 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     loader.style.display = 'none'
                 }, 500);
             })
+
+            let itemPage = document.querySelector('.item_page');
+
+            if (itemPage !== null) {
+                document.querySelector('.header').style = 'background: gray';
+            }
         </script>
         <?php $this->endBody() ?>
     </body>

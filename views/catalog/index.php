@@ -45,10 +45,14 @@ SwiperSlider::widget([
             <?php foreach ($men as $item): ?>
                 <div class="card">
                     <img src="/images/jeans/<?= $item['id'] ?>.jpg" alt="">
-                    <h3><?= $item->name ?></h3>
-
-                    <span class="price"><?= $item['price'] - ($item['price'] * ($item['discount'] / 100)) ?> ₽</span>
-
+                    <a href="/catalog/item?id=<?= $item->id ?>">
+                        <h3><?= $item->name ?></h3>
+                    </a>
+                    <a href="/catalog/buy?id=<?= $item->id ?>">
+                        <span class="price" title="Нажмите для добавления в корзину">
+                            <?= floor($item['price'] - ($item['price'] * ($item['discount'] / 100))) ?> ₽
+                        </span>
+                    </a>
                 </div>
             <?php endforeach; ?>
         </div>
@@ -59,10 +63,14 @@ SwiperSlider::widget([
             <?php foreach ($women as $item): ?>
                 <div class="card">
                     <img src="/images/jeans/<?= $item['id'] ?>.jpg" alt="">
-                    <h3><?= $item->name ?></h3>
-
-                    <span class="price"><?= $item['price'] - ($item['price'] * ($item['discount'] / 100)) ?> ₽</span>
-
+                    <a href="/catalog/item?id=<?= $item->id ?>">
+                        <h3><?= $item->name ?></h3>
+                    </a>
+                    <a href="/catalog/buy?id=<?= $item->id ?>">
+                        <span class="price" title="Нажмите для добавления в корзину">
+                            <?= floor($item['price'] - ($item['price'] * ($item['discount'] / 100))) ?> ₽
+                        </span>
+                    </a>
                 </div>
             <?php endforeach; ?>
         </div>
@@ -73,10 +81,14 @@ SwiperSlider::widget([
             <?php foreach ($child as $item) : ?>
                 <div class="card">
                     <img src="/images/jeans/<?= $item['id'] ?>.jpg" alt="">
-                    <h3><?= $item->name ?></h3>
-
-                    <span class="price"><?= $item['price'] - ($item['price'] * ($item['discount'] / 100)) ?> ₽</span>
-
+                    <a href="/catalog/item?id=<?= $item->id ?>">
+                        <h3><?= $item->name ?></h3>
+                    </a>
+                    <a href="/catalog/buy?id=<?= $item->id ?>">
+                        <span class="price" title="Нажмите для добавления в корзину">
+                            <?= floor($item['price'] - ($item['price'] * ($item['discount'] / 100))) ?> ₽
+                        </span>
+                    </a>
                 </div>
             <?php endforeach; ?>
         </div>
